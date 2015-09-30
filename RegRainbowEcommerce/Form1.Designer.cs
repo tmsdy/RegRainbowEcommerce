@@ -38,15 +38,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(112, 184);
+            this.button1.Location = new System.Drawing.Point(112, 218);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -56,14 +58,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 20);
+            this.textBox1.Location = new System.Drawing.Point(107, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(114, 21);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(53, 147);
+            this.textBox2.Location = new System.Drawing.Point(53, 181);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(192, 21);
             this.textBox2.TabIndex = 2;
@@ -71,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 23);
+            this.label1.Location = new System.Drawing.Point(27, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 3;
@@ -105,7 +107,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(243, 195);
+            this.label2.Location = new System.Drawing.Point(243, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 24);
             this.label2.TabIndex = 6;
@@ -115,19 +117,32 @@
             // 
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(13, 94);
+            this.panel1.Location = new System.Drawing.Point(13, 128);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(299, 31);
             this.panel1.TabIndex = 7;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.radioButton5);
             this.panel2.Controls.Add(this.radioButton3);
             this.panel2.Controls.Add(this.radioButton4);
             this.panel2.Location = new System.Drawing.Point(13, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(299, 31);
+            this.panel2.Size = new System.Drawing.Size(299, 57);
             this.panel2.TabIndex = 8;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(19, 25);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(101, 16);
+            this.radioButton5.TabIndex = 6;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "個人帳簿 V3.0";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -153,11 +168,22 @@
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(233, 18);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "獲取本機硬體碼";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 224);
+            this.ClientSize = new System.Drawing.Size(342, 258);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -171,6 +197,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "弈飛資訊系列註冊機";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -193,6 +220,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.Button button2;
     }
 }
 
