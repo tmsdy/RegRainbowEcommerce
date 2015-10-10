@@ -106,5 +106,11 @@ namespace RegRainbowEcommerce
 
             textBox1.Text = Util.GetSystemIdNumber();
         }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            sVersionPrefix = "RW";
+            button2.Enabled = false;
+        }
     }
 }

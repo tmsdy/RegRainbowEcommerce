@@ -42,6 +42,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -124,6 +125,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.radioButton6);
             this.panel2.Controls.Add(this.radioButton5);
             this.panel2.Controls.Add(this.radioButton3);
             this.panel2.Controls.Add(this.radioButton4);
@@ -135,7 +137,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(19, 25);
+            this.radioButton5.Location = new System.Drawing.Point(179, 25);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(101, 16);
             this.radioButton5.TabIndex = 6;
@@ -177,6 +179,18 @@
             this.button2.Text = "獲取本機硬體碼";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(19, 25);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(95, 16);
+            this.radioButton6.TabIndex = 7;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "彩虹WEB V6.0";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
             // Form1
             // 
@@ -222,6 +236,7 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton radioButton6;
     }
 }
 
