@@ -114,7 +114,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 24);
             this.label2.TabIndex = 6;
-            this.label2.Text = "crack by tmsdy\r\n   20150930";
+            this.label2.Text = "crack by tmsdy\r\n   20151018";
             // 
             // panel1
             // 
