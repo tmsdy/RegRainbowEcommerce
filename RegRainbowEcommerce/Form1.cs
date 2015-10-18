@@ -51,6 +51,15 @@ namespace RegRainbowEcommerce
         //}
         private void button1_Click(object sender, EventArgs e)
         {
+            if (radioButton7.Checked)
+            {
+                Random rd = new Random();
+                int iRand = rd.Next(10000, 99999);
+
+                textBox2.Text = Util.ValidateSN(sVersionPrefix + sVersion + "-" + iRand.ToString());
+                return;
+            }
+
             if (textBox1.Text.Length == 0)
             {
                 MessageBox.Show("請輸入硬體ID");
@@ -65,6 +74,7 @@ namespace RegRainbowEcommerce
 
             }
             textBox2.Text = sKey0Key3.Substring(0, 5) + "-" + sVersion + "-1234567-" + sKey0Key3.Substring(5, 5);
+            //textBox3.Text = Util.ValidateSN(sKey0Key3.Substring(0, 5) + "-" + sKey0Key3.Substring(5, 5));
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -109,8 +119,24 @@ namespace RegRainbowEcommerce
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
-            sVersionPrefix = "RW";
+            sVersionPrefix = "RF";
             button2.Enabled = false;
         }
+
+        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            sVersionPrefix = "RW";
+            button2.Enabled = false;
+            
+
+        }
+
+        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+        {
+            sVersionPrefix = "RM";
+            button2.Enabled = false;
+        }
+
+    
     }
 }

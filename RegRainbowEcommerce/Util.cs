@@ -243,7 +243,7 @@ namespace RegRainbowEcommerce
             return obj2["VolumeSerialNumber"].ToString();
         }
 
-        public static bool ValidateSN(string ProdSN)
+        public static string ValidateSN(string ProdSN)
         {
             string[] strArray = ProdSN.Split(new char[] { '-' });
             string str = strArray[0].ToUpper();
@@ -254,7 +254,7 @@ namespace RegRainbowEcommerce
             string str4 = Convert.ToBase64String(Encoding.UTF8.GetBytes(s)).ToUpper().Substring(0, 5);
             s = GetMD5Data(str4 + str3 + str2 + str);
             string str5 = Convert.ToBase64String(Encoding.UTF8.GetBytes(s)).ToUpper().Substring(0, 5);
-            return ((str + "-" + str2 + "-" + str3 + "-" + str4 + "-" + str5).Replace("I", "1").Replace("O", "0").Replace("U", "V").Replace("Z", "2") == ProdSN);
+            return ((str + "-" + str2 + "-" + str3 + "-" + str4 + "-" + str5).Replace("I", "1").Replace("O", "0").Replace("U", "V").Replace("Z", "2")  );
         }
 
 
